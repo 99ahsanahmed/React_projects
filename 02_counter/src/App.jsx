@@ -1,14 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   let [counter , meraCounter] = useState(5);
 
+//interview question
   const addValue = () => {
     if(counter < 20 ){
-    meraCounter(counter + 1)
+    // meraCounter(counter + 1)
+    // meraCounter(counter + 1)
+    // meraCounter(counter + 1)
+//it will add only one value because state changes in a patch
+//SOLUTION:
+    meraCounter((pichliValue)=>{return pichliValue + 1})
+    meraCounter((pichliValue)=>{return pichliValue + 1})
+    meraCounter((pichliValue)=>{return pichliValue + 1})
   }
   else{
    counter = 20 
